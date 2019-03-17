@@ -27,11 +27,13 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int value = sc.nextInt();
         Books books = new Books(value);
+        int ID = 1;
         for (int i = 0; i < value; i++) {
-            System.out.println("Please enter the following info Id, Title, Author, Publisher, Year, Page, Price ");
-            Book book = new Book(inputInt(), inputString(), inputString(), inputString(), inputInt(), inputInt(), inputDouble());
+            System.out.println("Please enter the following info Title, Author, Publisher, Year, Page, Price ");
+            Book book = new Book(ID, inputString(), inputString(), inputString(), inputInt(), inputInt(), inputDouble());
             books.add(book);
             System.out.println();
+            ID++;
         }
         return books;
     }
